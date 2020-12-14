@@ -1,0 +1,24 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>60</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Player
+--
+-name: String
+-coinOption: String
+--
++getCoinOption():String
++setCoinOption():String
++getRandOption: String
++setRandOption(oponentFlip: String): Void
++didPlayerWin(flipOption:String):String
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Coin
+--
+-FlipOption
+--
++getRandomFlipOption():String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>320</y><w>210</w><h>190</h></coordinates><panel_attributes>Game
+--
+-players: List&lt;Player&gt;
+-coin: Coin
+--
++create
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>

@@ -1,0 +1,36 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>36</x><y>20</y><w>210</w><h>70</h></coordinates><panel_attributes>_object: Class_Players
+--
+name: String="name"
+coinOption  String="Head or tail" 
+assertOption String="Yes or No"
+IsWinner String ="Yes or No"
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>406</x><y>20</y><w>210</w><h>70</h></coordinates><panel_attributes>_object: Class_Coin
+--
+coinOption String = "True or False"
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>36</x><y>220</y><w>210</w><h>70</h></coordinates><panel_attributes>_object: Class_Game
+--
+id: Long="36548"
+players List&lt;Player&gt;
+Coin Coin
+ExecuteGame 
+
+
+[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>142</x><y>196</y><w>30</w><h>20</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>162</x><y>86</y><w>20</w><h>30</h></coordinates><panel_attributes>2
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>142</x><y>96</y><w>30</w><h>20</h></coordinates><panel_attributes>2
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>522</x><y>96</y><w>30</w><h>20</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>252</x><y>236</y><w>30</w><h>20</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>236</x><y>36</y><w>190</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Text</id><coordinates><x>386</x><y>36</y><w>30</w><h>20</h></coordinates><panel_attributes>1
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>246</x><y>36</y><w>30</w><h>20</h></coordinates><panel_attributes>2
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>306</x><y>26</y><w>60</w><h>20</h></coordinates><panel_attributes>Flip
+
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>136</x><y>146</y><w>70</w><h>20</h></coordinates><panel_attributes>Includes
+
+
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>126</x><y>76</y><w>30</w><h>160</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>286</x><y>236</y><w>70</w><h>20</h></coordinates><panel_attributes>Includes
+
+
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>236</x><y>86</y><w>290</w><h>190</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;170;270;170;270;10</additional_attributes></element></diagram>

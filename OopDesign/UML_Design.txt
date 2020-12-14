@@ -1,0 +1,42 @@
+UML: Coin Flip.
+
+Description: 
+            2 players, one ramdonmly chooses head or tail of a coin flip.  
+            Coin is flipped.
+            Result is displayed.
+            the winner is the player that asserts the CoinFlip Option. 
+            The other looses the game.
+            Game starts again.
+
+Triggers:
+            A player offers a prediction for a coin Flip.
+
+Actors:
+            Game
+            Coin
+            players (one that guess, the other that accepts)
+
+Precond:
+            A new game started. 
+            A coin 
+            Two Players
+
+
+Goals:
+            have a winner.
+
+Not Available:
+            Alternatives
+
+Steps of execution:
+
+            1. Create a game.
+            2. Instantiate 2 players
+            3. Instantiate a Coin
+            4. Randomly choose a player for guess flip coin option.
+            5. flip coin
+            6. publish winner and looser.
+            7. start over again Game
+
+            
+             
