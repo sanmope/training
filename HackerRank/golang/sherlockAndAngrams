@@ -1,0 +1,109 @@
+package main
+
+import (
+    "fmt"
+    "sort"
+    "strings"
+)
+
+// Complete the repeatedString function below.
+func repeatedString(s string, n int64) int64 {
+    var counter int64 = 0
+    var key  = "a"
+    
+    if(int64(len(s)) <= n) {
+        var multiplier int64 = n/int64(len(s))
+        var extraLoop int64 = n%int64(len(s))
+        fmt.Println("len(s)",len(s))
+        fmt.Println("multiplier",multiplier)
+        fmt.Println("extraLoop",extraLoop)
+        fmt.Println("n",n)
+        
+        for i := 0; i < len(s); i++ { // gets how many a in the string
+            if (string(s[i]) == key) {
+                counter++;
+            }
+        } 
+        
+        fmt.Println("counter1",counter)
+        counter = counter*multiplier // calculate repetition for each string repetition
+        fmt.Println("counter2",counter)
+        
+        for i := int64(0); i < extraLoop; i++ { // gets how many a in the string for the extra loop
+            if (string(s[i]) == key) {
+                counter++;
+            }
+        } 
+        
+        fmt.Println("counter3",counter)
+        
+    } else {
+        for i := int64(0); i < n; i++ {
+            if (string(s[i]) == key) {
+                counter++;
+            }
+        }
+    }
+    
+    fmt.Println("counter4",counter)
+    return counter;
+
+}
+
+
+func sherlockAndAnagrams(s string) int32 {
+	fmt.Println("string s:",s)
+	m:= make(map[string]int)
+	
+	for i:= 0; i < len(s); i++ {
+		fmt.Println("i: ",i)
+		for j := i; j < len(s); j++ { 
+			fmt.Println("j: ",j)
+			
+			ordering := make([]string, j - i + 1)
+			
+			
+			for k := 0; k <= j - i; k ++ {
+				ordering [k] = string(s[i + k])
+				fmt.Println("creating ordering: ", ordering [k], s[i + k])
+			} 
+			
+			sort.Strings(ordering)	
+			fmt.Println("substring ordering: ",ordering)
+			ordered := strings.Join(ordering,"")
+			fmt.Println("substring ordered: ",ordered)
+			
+			val := m[ordered]
+			fmt.Println("not in m: ",val,ordered)
+			m[ordered] = m[ordered] + 1
+		
+			fmt.Println("in m: ",ordered,val,m[ordered])
+		}
+	}
+	var anagramPairs int = 0
+	for key, value := range m {
+		fmt.Println("key: ",key,"value: ",value)
+		anagramPairs = anagramPairs  + value*(value - 1)/2
+		fmt.Println("anagramPairs: ",anagramPairs )
+	}
+	
+	return int32(anagramPairs;
+
+}
+
+func main() {
+   
+
+    fmt.Println("hello")
+
+    var s string = "dichcagakdajjhhdhegiifiiggjebejejciaabbifkcbdeigajhgfcfdgekfajbcdifikafkgjjjfefkdbeicgiccgkjheeiefje"
+    //var n int64 = 3
+    
+    //fmt.Println(s,n)
+    //fmt.Println(repeatedString(s, n))
+    //result := repeatedString(s, n)
+
+    fmt.Println(sherlockAndAnagrams(s))
+    //fmt.Print(result)
+}
+
