@@ -21,7 +21,7 @@ async def scan_all_ports():
     tasks = [scan_port('127.0.0.1',port) for port in range(65535)]
     await asyncio.gather(*tasks, return_exceptions=True)
 
-start = time.time()
+start = time.time() #perf_counter is better
 scan_all_ports()
 end = time.time()
 
